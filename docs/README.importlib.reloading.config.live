@@ -1,0 +1,26 @@
+// source: https://stackoverflow.com/questions/62455023/mock-import-failure/62456280#62456280
+
+import sys
+from importlib import reload
+
+import pytest
+
+import moduleA
+
+
+class ImportRaiser:
+    def find_spec(self, fullname, path, target=None):
+        if fullname == 'pkg':
+           # we get here if the module is not loaded and not in sys.modules
+            raise ImportError()
+
+
+sys.meta_path.insert(0, ImportRaiser())
+
+
+def test_import_error():
+    if 'pkg' in sys.modules:
+        del sys.modules['pkg']
+
+    with pytest.raises(ImportError):
+        reload(moduleA)
