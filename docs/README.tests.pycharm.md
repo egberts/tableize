@@ -92,6 +92,24 @@ Make that "virtual" Python binary the default inside this project:
       * Paste in the pelican binary as reported by earlier `echo ...` test.
         (e.g., /home/user/virtualenvs/pelican/bin/python3)
 
+Pytest Debugging
+================
+When establishing a JetBrain PyCharm session, `pytest` typically spawns
+off 6 subprocesses. Let us reduce this to 1 subprocess (like in almost
+sequential test):
+
+* Go to "Run" menu option on Main Menu Toolbar, a drop-down menu
+option list appears,
+
+ * select "Edit Configurations...", and "Run/Debug Configuration" dialog box appears.
+
+  * In lower left corner, click on "Edit Configuration Templates" hyperlink, and "Run/Debug Configuration Template" dialog box appears.
+
+   * Click on "Python tests" in left panel of "Run/Debug Configuration Template" dialog box to expand more choices for a Python test file.
+
+    * Click on "Pytest" menu option, then more options appear in the right panel.
+     * In the 'Additional Arguments' textbox, enter in '-n0' for no multi-process debugging.  This gets passed to the `pytest` now for all pytests you create.
+
 
 Virtual Environment
 ===================
