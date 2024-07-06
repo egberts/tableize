@@ -56,11 +56,11 @@ echo $DIRENV_FILE
 ```
 
 Exactly one Python binary path should appear.  If two or more
-lines worth of python binary appears, you cannot use
+lines worth of Python binary appears, you cannot use
 different tools of virtual environment together.
 
 From the echo commands performed above, cut and paste the full
-path specification to that virtual Python binary.
+path specification that is pointing to the virtual Python binary.
 
 Make that "virtual" Python binary the default inside this project:
 
@@ -95,17 +95,17 @@ Make that "virtual" Python binary the default inside this project:
 
 Virtual Environment
 ===================
-If you want to add a virtual environment
+If you want to add a virtual environment, TBD.
 
 Debug Session
 =============
 
-Next is to set up a debug session using Pytest under PyCharm.
+Next is to set up a debug session using Pytest under PyCharm IDE.
 
 Couple ways to setup the debug session within a Pelican pytest under PyCharm IDE:
 
 1. by a Python test source file
-2. from a new Run/Edit Configuration item
+2. from a new Run/Edit Configuration menu item
 
 
 By a Source File
