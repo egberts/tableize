@@ -107,7 +107,8 @@ sequential test):
         </ul>
       </ul>
     </ul>
-  </li>
+  </ul>
+</ul>
 </ul>
 
 
@@ -142,27 +143,17 @@ To establish a first-time debug session in a brand new Python test file:
 <ul>
   <li>In left-side project/file navigation panel, on the 'tests' subdirectory, right-click on it and a pop-up context menu appears.</li>
   <ul>
-    <li>* Select `New` submenu option.  A new menu slideout appears.</li>
+    <li>Select `New` submenu option.  A new menu slideout appears.</li>
     <ul>
       <li>Select `Python file` submenu option. A new dialog box that is titled `New Python file` appears.</li>
       <ul>
-        <li>
-          Firstly, select the `Python unit test` option (if you started to type in the filename firstly, it will get
-      harder to select that desired unit test option afterward after  hitting the ENTER key).
+        <li>Firstly, select the `Python unit test` option (if you started to type in the filename firstly, it will get harder to select that desired unit test option afterward after  hitting the ENTER key).</li>
         <ul>
-          <li>Then go back and select that filename's text box and firstly type in `test_` then its desired filename. If testing `b_parse.py`, type in `test_b_parse.py` 
-      NOTE: This is the only way for PyCharm to pre-fill this
-            unit test source file with the good template.
-          </li>
+          <li>Then go back and select that filename's text box and firstly type in `test_` then its desired filename. If testing `b_parse.py`, type in `test_b_parse.py`<p>NOTE: This is the only way for PyCharm to pre-fill this unit test source file with the good template.</p></li>
         </ul>
-
-
-        </li>
       </ul>
-
     </ul>
-
-  
+  </ul>
 </ul>
 
 Last step before debugging is to create the Run/Debug configuration.
@@ -187,30 +178,26 @@ By An Existing Test Source File
 ===============================
 To establish a debug session in an opened source file:
 
-* open a Python test file until the source file appears in the main viewing panel.
-
- * Locate the the gutter column (line numbers of source file)
-
-  * Identify the line number of a Python code (not a comment nor blank line)
-    to start debugging
-
-   * click next to a line number to add a "red-dot" breakpoint
-
-* In left-side project/file navigation panel, choose one of
-  the `test_*` file to debug then right-click on it.
-  A pop-up context menu appears.
-
- * On the popped up context menu, select `Debug pytest in test-*` menu
-   option to create a new pytest run/debug configuration for
-   this `test_*` unittest file.
-
-* On main menu (upper) toolbar, select `Run`.  A menu slideout appears.
- * Select the `Edit Configuration` submenu option.
-   A new dialog box that is titled `Edit Run/Debug Configurations` now appears.
-
-  * In the left-side panel, expand the `Pytest` folder into a tree
-    of previous run/debug sessions.
-    NOTE: If the file is grayed-out, it means "I HAVEN'T BEEN SAVED YET".
-          You will lose those when closing this project or exiting PyCharm.
-
-  *
+<ul>
+  <li>open a Python test file until the source file appears in the main viewing panel.</li>
+  <ul>
+    <li>Locate the the gutter column (line numbers of source file)</li>
+    <ul>
+      <li>Identify the line number of a Python code (not a comment nor blank line) to start debugging</li>
+      <ul>
+        <li>click next to a line number to add a "red-dot" breakpoint</li>
+      </ul>
+    </ul>
+  </ul>
+  <li>In left-side project/file navigation panel, choose one of the `test_*` file to debug then right-click on it. A pop-up context menu appears.</li>
+  <ul>
+    On the popped up context menu, select `Debug pytest in test-*` menu option to create a new pytest run/debug configuration for this `test_*` unittest file.
+  </ul>
+  <li>On main menu (upper) toolbar, select `Run`.  A menu slideout appears.</li>
+  <ul>
+    <li>Select the `Edit Configuration` submenu option.  A new dialog box that is titled `Edit Run/Debug Configurations` now appears.</li>
+    <ul>
+      <li>In the left-side panel, expand the `Pytest` folder into a tree of previous run/debug sessions.<p>NOTE: If the file is grayed-out, it means "I HAVEN'T BEEN SAVED YET". You will lose those when closing this project or exiting PyCharm.</p></li>
+    </ul>
+  </ul>
+ </ul>
