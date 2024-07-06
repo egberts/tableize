@@ -9,6 +9,7 @@ Some configuration needs to be made into project-wide settings of PyCharm IDE.
 
 * test directory
 * default `pelican` binary, location of
+* limiting to 1 process during pytest for debug session
 * Run/Debug Configuration setting
 
 Test Directory
