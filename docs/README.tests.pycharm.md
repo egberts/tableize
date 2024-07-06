@@ -17,16 +17,16 @@ Test Directory
 
 Firstly, help the PyCharm IDE properly identify this Pelican Test
 directory (more solidly):
-
-* Expand the project tree to 'pelican/pelican[-plugins]/tests' tests in the
-  left-side project/file navigation panel,
-
- * Right-click on this `tests` directory to bring up a pop-up context menu.
-
- * Select 'Mark directory as' menu option.
-
-  * Select 'Test Sources Root' submenu option.
-      This 'tests' folder is now green-colored.
+<ul>
+  <li>Expand the project tree to 'pelican/pelican[-plugins]/tests' tests in the left-side project/file navigation panel,</li>
+  <ul>
+    <li>Right-click on this `tests` directory to bring up a pop-up context menu.</li>
+    <li>Select 'Mark directory as' menu option.</li>
+    <ul>
+      <li>Select 'Test Sources Root' submenu option. This 'tests' folder is now green-colored.</li>
+    </ul>
+  </ul>
+</ul>
 
 
 Which Python Binary
@@ -63,34 +63,27 @@ From the echo commands performed above, cut and paste the full
 path specification that is pointing to the virtual Python binary.
 
 Make that "virtual" Python binary the default inside this project:
-
-* From the Main Menu Bar, select <u>`F`</u>`ile`, then `Settings`
-  (or press Ctrl-Alt-S), then the dialog box titled `Settings` appear.
-
- * In left-side panel of `Settings` dialog, go down to `Project: ...` and
-   click on it to expand for more choices.
-
- * Click on `Python Interpreter` option to see the right-side
-   `Project: Pelican > Python Interpreter` panel showing many options.
-
-  * Click on `Add Interpreter` next to the `Python Interpreter:` in
-    the `Project: Pelican > Python Interpreter` panel.
-    NOTE: This `Project: Pelican > Python Interpreter` is the primary step
-          to adding additional virtual environment's worth of Python binary.
-
- * A drop-down menu box appears, select `Add Local Interpreter ...`.
-      A popup dialog box titled `Add Python Interpreter` then appears.
-
-     * The left-side panel of `Add Python Interpreter` dialog box,
-       select `VirtualEnv Environment`.
-
-      * Select `Existing` for `Environment`
-
-      * Next to `Location`, at the end of the text box, click
-        on the folder icon.
-
-      * Paste in the pelican binary as reported by earlier `echo ...` test.
-        (e.g., /home/user/virtualenvs/pelican/bin/python3)
+<ul>
+  <li>From the Main Menu Bar, select <u>`F`</u>`ile`, then `Settings`
+  (or press Ctrl-Alt-S), then the dialog box titled `Settings` appear.</li>  
+  <ul>
+    <li>In left-side panel of `Settings` dialog, go down to `Project: ...` and click on it to expand for more choices.</li>
+    <li>Click on `Python Interpreter` option to see the right-side `Project: Pelican > Python Interpreter` panel showing many options.</li>
+    <ul>
+      <li>Click on `Add Interpreter` next to the `Python Interpreter:` in  the `Project: Pelican > Python Interpreter` panel. <p>NOTE: This `Project: Pelican > Python Interpreter` is the primary step
+          to adding additional virtual environment's worth of Python binary.</p></li>
+    </ul>
+    <li> A drop-down menu box appears, select `Add Local Interpreter ...`.  A popup dialog box titled `Add Python Interpreter` then appears.</li>
+    <ul>
+      <li>The left-side panel of `Add Python Interpreter` dialog box, select `VirtualEnv Environment`.</li>
+      <ul>
+        <li>Select `Existing` for `Environment`</li>
+        <li>Next to `Location`, at the end of the text box, click on the folder icon.</li>
+        <li>Paste in the pelican binary as reported by earlier `echo ...` test (e.g., /home/user/virtualenvs/pelicanA/bin/python3)</li>
+      </ul>
+    </ul>
+  </ul>
+</ul>
 
 Pytest Debugging
 ================
@@ -98,17 +91,24 @@ When establishing a JetBrain PyCharm session, `pytest` typically spawns
 off 6 subprocesses. Let us reduce this to 1 subprocess (like in almost
 sequential test):
 
-* Go to "Run" menu option on Main Menu Toolbar, a drop-down menu
-option list appears,
-
- * select "Edit Configurations...", and "Run/Debug Configuration" dialog box appears.
-
-  * In lower left corner, click on "Edit Configuration Templates" hyperlink, and "Run/Debug Configuration Template" dialog box appears.
-
-   * Click on "Python tests" in left panel of "Run/Debug Configuration Template" dialog box to expand more choices for a Python test file.
-
-    * Click on "Pytest" menu option, then more options appear in the right panel.
-     * In the 'Additional Arguments' textbox, enter in '-n0' for no multi-process debugging.  This gets passed to the `pytest` now for all pytests you create.
+<ul>
+  <li>Go to "Run" menu option on Main Menu Toolbar, a drop-down menu option list appears, </li>
+  <ul>
+    <li>select "Edit Configurations...", and "Run/Debug Configuration" dialog box appears.</li>
+    <ul>
+      <li>In lower left corner, click on "Edit Configuration Templates" hyperlink, and "Run/Debug Configuration Template" dialog box appears.</li>
+      <ul>
+        <li>Click on "Python tests" in left panel of "Run/Debug Configuration Template" dialog box to expand more choices for a Python test file.</li>
+        <ul>
+          <li>Click on "Pytest" menu option, then more options appear in the right panel.</li>
+          <ul>
+            <li>In the 'Additional Arguments' textbox, enter in '-n0' for no multi-process debugging.  This gets passed to the `pytest` now for all pytests you create.</li>
+          </ul>
+        </ul>
+      </ul>
+    </ul>
+  </li>
+</ul>
 
 
 Virtual Environment
@@ -139,25 +139,31 @@ Two ways to start a debug session are:
 
 To establish a first-time debug session in a brand new Python test file:
 
-* In left-side project/file navigation panel, on the 'tests' subdirectory,
-  right-click on it and a pop-up context menu appears.
-
- * Select `New` submenu option.  A new menu slideout appears.
-
-  * Select `Python file` submenu option. A new dialog box that is
-    titled `New Python file` appears.
-
-   * Firstly, select the `Python unit test` option
-     (if you started to type in the filename firstly, it will get
-      harder to select that desired unit test option afterward after
-      hitting the ENTER key).
-
-    * Then go back and select that filename's text box
-      and firstly type in `test_` then its desired filename.
-      NOTE: If testing `b_parse.py`, type in `test_b_parse.py`
-
+<ul>
+  <li>In left-side project/file navigation panel, on the 'tests' subdirectory, right-click on it and a pop-up context menu appears.</li>
+  <ul>
+    <li>* Select `New` submenu option.  A new menu slideout appears.</li>
+    <ul>
+      <li>Select `Python file` submenu option. A new dialog box that is titled `New Python file` appears.</li>
+      <ul>
+        <li>
+          Firstly, select the `Python unit test` option (if you started to type in the filename firstly, it will get
+      harder to select that desired unit test option afterward after  hitting the ENTER key).
+        <ul>
+          <li>Then go back and select that filename's text box and firstly type in `test_` then its desired filename. If testing `b_parse.py`, type in `test_b_parse.py` 
       NOTE: This is the only way for PyCharm to pre-fill this
             unit test source file with the good template.
+          </li>
+        </ul>
+
+
+        </li>
+      </ul>
+
+    </ul>
+
+  
+</ul>
 
 Last step before debugging is to create the Run/Debug configuration.
 
